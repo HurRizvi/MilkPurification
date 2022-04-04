@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+        <data>
+            <variable
+                name="listener"
+                type="com.hur.milkpurification.listener.GenericListeners" />
+        </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/no"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_35sdp"
+            android:layout_marginEnd="@dimen/_35sdp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@drawable/pattern"
+            android:contentDescription="@string/no" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imgLogo"
+            android:background="@drawable/shape_top_round_fill_white">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/login"
+                        android:textColor="@color/background"
+                        android:textSize="@dimen/_25ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_40sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/phone_number"
+                            android:textColorHint="@color/background"
+                            app:hintTextColor="@color/background"
+                            app:boxStrokeColor="@color/background"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/background"
+                                android:textColorHint="@color/background"
+                                android:autofillHints="@string/phone_number"
+                                android:maxLength="12"
+                                android:inputType="phone" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:textColorHint="@color/background"
+                        app:hintTextColor="@color/background"
+                        app:boxStrokeColor="@color/background"
+                        app:endIconMode="password_toggle"
+                        app:endIconTint="@color/green"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/background"
+                            android:textColorHint="@color/background"
+                            android:inputType="textPassword" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_45sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:onClick="@{() -> listener.onTapLogin()}"
+                        android:backgroundTint="@color/blue"
+                        android:text="@string/login"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_13ssp"
+                        app:cornerRadius="@dimen/_10sdp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:textAllCaps="false"
+                        android:layout_gravity="end"
+                        android:textColor="@color/blue"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:textSize="@dimen/_13sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/forgot_password"
+                        app:rippleColor="@color/tileColor"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/don_t_have_account"
+                            android:textColor="@color/background"
+                            android:textSize="@dimen/_12ssp"
+                            android:layout_gravity="center"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:textAllCaps="false"
+                            android:layout_gravity="end"
+                            android:textColor="@color/blue"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:textSize="@dimen/_12ssp"
+                            android:onClick="@{() -> listener.onTapSignup()}"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="@string/sign_up"
+                            app:rippleColor="@color/tileColor"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

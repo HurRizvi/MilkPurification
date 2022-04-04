@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="listener"
+            type="com.hur.milkpurification.listener.GenericListeners" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.activity.SplashActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/no"
+            android:src="@drawable/splash_top" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:background="@drawable/pattern"
+            android:contentDescription="@string/no" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="DAIRY MILK PURIFICATION"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/poppins_regular"
+            android:onClick="@{() -> listener.onTapSubmit()}"
+            android:text="@string/get_started"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            app:cornerRadius="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+</layout>

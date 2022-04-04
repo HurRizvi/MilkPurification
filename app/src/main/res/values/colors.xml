@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#15B124</color>
+    <color name="darkgreen">#419549</color>
+    <color name="zircon">#F5F8FF</color>
+    <color name="white_light">#33F5F8FF</color>
+    <color name="tileColor">#212B36</color>
+    <color name="blue">#3366FF</color>
+    <color name="mirage">#161c24</color>
+    <color name="background">#202A35</color>
+    <color name="grey">#F5F5F5</color>
+    <color name="alto">#E0E0E0</color>
+    <color name="coolGreen">#2ecc71</color>
+    <color name="danger">#e74c3c</color>
+    <color name="light_gray">#EEEEEE</color>
+    <color name="gray">#999999</color>
+    <color name="wildSand">#f4f4f4</color>
+</resources>
