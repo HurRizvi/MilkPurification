@@ -32,6 +32,7 @@ class HomeActivity : BaseActivity() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
+
                 }
 
             })
