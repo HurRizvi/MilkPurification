@@ -20,6 +20,12 @@ class LoginActivity :  BaseActivity()
                 gotoActivity(SignUpActivity::class.java)
 
             }
+
+
+            override fun onTapLogin() {
+                gotoActivity(HomeActivity::class.java)
+
+            }
         }
 
         }
