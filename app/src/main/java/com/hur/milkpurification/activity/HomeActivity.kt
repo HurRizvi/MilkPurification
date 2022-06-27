@@ -22,6 +22,8 @@ class HomeActivity : BaseActivity() {
       val  firebase = FirebaseDatabase.getInstance()
         dbReference = FirebaseDatabase.getInstance().getReference(firebase.getReference().toString())
 
+
+
         binding.btnRead.setOnClickListener {
             dbReference.addValueEventListener(object : ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
