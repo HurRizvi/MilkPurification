@@ -1,44 +1,89 @@
 package com.hur.milkpurification.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
+import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.firebase.database.*
+import com.hur.milkpurification.R
 import com.hur.milkpurification.databinding.ActivityHomeBinding
-import com.hur.milkpurification.databinding.ActivityLoginBinding
-import com.hur.milkpurification.model.UserInfo
-import java.util.*
 
 class HomeActivity : BaseActivity() {
     private lateinit var binding: ActivityHomeBinding
-    private lateinit var dbReference: DatabaseReference
+    private var navController: NavController? = null
+    private val currentLat = 0.0
+    private val currentLng = 0.0
+
+    private val fusedLocationProviderClient: FusedLocationProviderClient? = null
+
+//    private lateinit var dbReference: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-      val  firebase = FirebaseDatabase.getInstance()
-        dbReference = FirebaseDatabase.getInstance().getReference(firebase.getReference().toString())
+
+        /*    NavHostFragment finalHost = NavHostFragment.create(R.navigation.nav_graph);
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.nav_host_Fragmnet,finalHost)
+                .setPrimaryNavigationFragment(finalHost) // equivalent to app:defaultNavHost="true"
+                .commit();*/
 
 
-
-        binding.btnRead.setOnClickListener {
-            dbReference.addValueEventListener(object : ValueEventListener{
-                override fun onDataChange(snapshot: DataSnapshot) {
-                     val userProfile = snapshot.getValue(UserInfo::class.java)
-                    val a = userProfile!!.Milk_Depth
-                    Log.d("FCMVALUE", a.toString())
-                    binding.txtCheck.setText(userProfile?.Milk_Depth!!)
+        binding.bottomNavigation.setOnItemSelectedListener { item ->
+            val id: Int = item.getItemId()
+            when (id) {
+                R.id.homeFragment -> {
+                    navController = Navigation.findNavController(
+                        this,
+                        R.id.navHostFragment
+                    )
+                    navController!!.navigate(R.id.homeFragment, null)
                 }
-
-                override fun onCancelled(error: DatabaseError) {
-
-                }
-
-            })
+            }
+            true
         }
+
+
+        /**
+         * Setup Navigation
+         */
+        //binding.bottomNavigation.background = null
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        NavigationUI.setupWithNavController(
+            binding.bottomNavigation ,
+            navHostFragment.navController
+        )
+
+
+
+
+//      val  firebase = FirebaseDatabase.getInstance()
+//        dbReference = FirebaseDatabase.getInstance().getReference(firebase.getReference().toString())
+
+
+
+//        binding.btnRead.setOnClickListener {
+//            dbReference.addValueEventListener(object : ValueEventListener{
+//                override fun onDataChange(snapshot: DataSnapshot) {
+//                     val userProfile = snapshot.getValue(UserInfo::class.java)
+//                    val a = userProfile!!.Milk_Depth
+//                    Log.d("FCMVALUE", a.toString())
+//                    binding.txtCheck.setText(userProfile?.Milk_Depth!!)
+//                }
+//
+//                override fun onCancelled(error: DatabaseError) {
+//
+//                }
+//
+//            })
+//        }
 
 //        dbReference.child("users").child(userId).setValue(user)
 //
@@ -46,6 +91,8 @@ class HomeActivity : BaseActivity() {
 
 
     }
+
+
 
 //    private fun createUser(name: String, mobile: String) {
 //        val user = UserInfo(name, mobile)

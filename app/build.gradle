@@ -2,7 +2,6 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'com.google.gms.google-services'
 }
 
 android {
@@ -90,6 +89,10 @@ dependencies {
 
     //Shape of view
     implementation 'io.github.florent37:shapeofview:1.4.7'
+
+    // Navigation Architecture component
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
 
 
     // Koin main features for Android (Scope,ViewModel ...)

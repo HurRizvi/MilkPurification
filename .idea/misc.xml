@@ -10,10 +10,20 @@
         <entry key="..\:/FYP/User/app/src/main/res/layout/activity_signup.xml" value="0.13333333333333333" />
         <entry key="..\:/FYP/User/app/src/main/res/layout/activity_splash.xml" value="0.14666666666666667" />
         <entry key="..\:/FYP/User/app/src/main/res/layout/loading_layout.xml" value="0.1796875" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/drawable-v24/photo.xml" value="0.2795" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/drawable/ic_baseline_my_location_24.xml" value="0.2795" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/drawable/ic_profile.xml" value="0.2795" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/drawable/ic_setting.xml" value="0.2795" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/drawable/transparent.xml" value="0.2795" />
         <entry key="..\:/Jari's Projects/FYP/app/src/main/res/layout/activity_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/FYP/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/FYP/app/src/main/res/layout/activity_signup.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/FYP/app/src/main/res/layout/activity_splash.xml" value="0.36666666666666664" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/layout/fragment_maps.xml" value="0.36666666666666664" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/layout/nav_header_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.18802083333333333" />
+        <entry key="..\:/Jari's Projects/FYP/app/src/main/res/menu/drawer_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
