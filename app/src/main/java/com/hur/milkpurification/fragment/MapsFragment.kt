@@ -38,7 +38,6 @@ class MapsFragment :BaseFragment<FragmentMapsBinding>() {
                 .bearing(0f)
                 .tilt(50f)
                 .build()
-
             googleMap.animateCamera(CameraUpdateFactory.newCameraPosition(googlePlex), 10000, null)
 
         }
