@@ -68,14 +68,27 @@
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:id="@+id/tvHeading"
                     android:layout_height="wrap_content"
-                    android:text="FCM READING :"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:textColor="@color/black"
-                    android:textSize="@dimen/_15sdp"
                     android:fontFamily="@font/poppins_medium"
+                    android:text="FCM READING :"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnRead"
+                    android:layout_below="@+id/tvHeading"
+                    android:text="Read"
                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btnRead"
+                    android:id="@+id/txtCheck"/>
 
 
 
