@@ -12,6 +12,7 @@ import com.hur.milkpurification.R
 import com.hur.milkpurification.databinding.ActivityHomeBinding
 import com.hur.milkpurification.model.UserInfo
 
+
 class HomeActivity : BaseActivity() {
     private lateinit var binding: ActivityHomeBinding
     private var navController: NavController? = null
@@ -56,28 +57,27 @@ class HomeActivity : BaseActivity() {
          */
         //binding.bottomNavigation.background = null
 
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
         NavigationUI.setupWithNavController(
             binding.bottomNavigation ,
             navHostFragment.navController
         )
 
 
-
-
-      val  firebase = FirebaseDatabase.getInstance()
-        dbReference = FirebaseDatabase.getInstance().getReference(firebase.getReference().toString())
-
+        val database = FirebaseDatabase.getInstance()
+        val dbReference = database.getReference("milkDepthInInches")
+//        dbReference.setValue("milkDepthInInches");
 
 
         binding.btnRead.setOnClickListener {
-            dbReference.child("milkDepthInInches").addValueEventListener(object : ValueEventListener{
+            dbReference.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                     val userProfile = snapshot.getValue(UserInfo::class.java)
-                    val a = userProfile!!.milkDepthInInches
-                    Log.d("FCMVALUE", a.toString())
-                    binding.txtCheck.setText(userProfile?.milkDepthInInches!!)
+
+                     val userProfile = snapshot.getValue(String::class.java)
+
+                    Log.d("FCMVALUE", userProfile.toString())
+
+                    binding.txtCheck.setText(userProfile)
                 }
 
                 override fun onCancelled(error: DatabaseError) {
@@ -86,43 +86,5 @@ class HomeActivity : BaseActivity() {
 
             })
         }
-
-        dbReference.child("milkDepthInInches").setValue("")
-
-//        dbReference.child("milkDepthInInches").child(userId).child("milkDepthInInches").setValue(milkDepthInInches)
-
-
-    }
-
-
-
-    private fun createUser(milkDepthInInches: Int) {
-        val user = UserInfo(milkDepthInInches)
-        dbReference.setValue(user)
-    }
-
-    private fun addUserChangeListener() {
-        // User data change listener
-        dbReference.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(dataSnapshot: DataSnapshot) {
-                val user = dataSnapshot.getValue(UserInfo::class.java)
-
-                // Check for null
-                if (user == null) {
-                    return
-                }
-
-
-                // Display newly updated name and email
-                user?.milkDepthInInches?.let { binding.txtCheck.setText(it).toString() }
-
-                // clear edit text
-                binding.txtCheck.setText("")
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                // Failed to read value
-            }
-        })
     }
 }

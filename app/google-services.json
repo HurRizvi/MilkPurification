@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "770968570322",
+    "firebase_url": "https://smartdairysystem-default-rtdb.firebaseio.com",
+    "project_id": "smartdairysystem",
+    "storage_bucket": "smartdairysystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770968570322:android:abff7b27b0025ca012a00b",
+        "android_client_info": {
+          "package_name": "com.hur.milkpurification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770968570322-0lqf10ga3noc2dhqc3bj9929p5huimqg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hur.milkpurification",
+            "certificate_hash": "7098ee39e2001f222eb91ceef2cfb5530a5d3eb9"
+          }
+        },
+        {
+          "client_id": "770968570322-mehfse8jk23116vm5mh9iqsj08tif8mn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHDG-vZ5eOE3VevnpmPE9XI16C6oDQjNo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770968570322-mehfse8jk23116vm5mh9iqsj08tif8mn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
