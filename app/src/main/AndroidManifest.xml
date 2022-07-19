@@ -34,6 +34,9 @@
             android:value="AIzaSyA_RjUAeDInDoFHu1eyBf_g_ninRj6ceUA" />
 
         <activity
+            android:name=".activity.DriverActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.HomeActivity"
             android:exported="false" />
         <activity

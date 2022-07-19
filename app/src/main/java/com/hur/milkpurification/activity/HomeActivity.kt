@@ -2,6 +2,7 @@ package com.hur.milkpurification.activity
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
@@ -51,7 +52,6 @@ class HomeActivity : BaseActivity() {
             true
         }
 
-
         /**
          * Setup Navigation
          */
@@ -73,11 +73,13 @@ class HomeActivity : BaseActivity() {
             dbReference.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
 
-                     val userProfile = snapshot.getValue(String::class.java)
+                     var userProfile = snapshot.getValue(Long::class.java)
 
                     Log.d("FCMVALUE", userProfile.toString())
 
-                    binding.txtCheck.setText(userProfile)
+                    binding.txtCheck.text = userProfile.toString()
+
+                    showToast(userProfile.toString())
                 }
 
                 override fun onCancelled(error: DatabaseError) {
@@ -86,5 +88,10 @@ class HomeActivity : BaseActivity() {
 
             })
         }
+    }
+
+    fun showToast(message : String){
+
+        Toast.makeText(this, "Value has been changed $message", Toast.LENGTH_SHORT).show()
     }
 }

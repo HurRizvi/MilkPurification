@@ -16,5 +16,10 @@
         android:name="com.hur.milkpurification.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/driverFragment"
+        android:name="com.hur.milkpurification.fragment.DriverFragment"
+        android:label="fragment_driver"
+        tools:layout="@layout/fragment_driver" />
 
 </navigation>

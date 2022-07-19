@@ -25,10 +25,15 @@
         <entry key="..\:/Jari's Projects/FYP/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.18802083333333333" />
         <entry key="..\:/Jari's Projects/FYP/app/src/main/res/menu/drawer_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Jari's Projects/FYP/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1785" />
+        <entry key="..\:/My Workplace/Android/MilkPurification/app/src/main/res/layout/activity_driver.xml" value="0.20416666666666666" />
+        <entry key="..\:/My Workplace/Android/MilkPurification/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/My Workplace/Android/MilkPurification/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/My Workplace/Android/MilkPurification/app/src/main/res/layout/fragment_driver.xml" value="0.20416666666666666" />
+        <entry key="..\:/My Workplace/Android/MilkPurification/app/src/main/res/menu/drawer_menu.xml" value="0.16296296296296298" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

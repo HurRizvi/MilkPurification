@@ -121,18 +121,18 @@ fun AppCompatActivity.gotoActivity(
     startActivity(i)
 }
 
-fun AppCompatActivity.changeStatusBarColor(@ColorRes color : Int) {
+fun AppCompatActivity.changeStatusBarColor(@ColorRes color: Int) {
     val window = this.window
     window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
     window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-    window.statusBarColor = ContextCompat.getColor(this,color)
+    window.statusBarColor = ContextCompat.getColor(this, color)
 }
 
-fun Fragment.changeStatusBarColor(@ColorRes color : Int) {
+fun Fragment.changeStatusBarColor(@ColorRes color: Int) {
     val window = requireActivity().window
     window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
     window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
-    window.statusBarColor = ContextCompat.getColor(requireContext(),color)
+    window.statusBarColor = ContextCompat.getColor(requireContext(), color)
 }
 
 fun AppCompatActivity.setTransparentStatusBar() {
@@ -144,7 +144,7 @@ fun AppCompatActivity.setTransparentStatusBar() {
     this.window.statusBarColor = Color.TRANSPARENT
 }
 
-fun AppCompatActivity.setStatusBarWithBlackIcon(@ColorRes color : Int) {
+fun AppCompatActivity.setStatusBarWithBlackIcon(@ColorRes color: Int) {
     this.window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
     this.window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
     this.window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN

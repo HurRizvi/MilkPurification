@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DriverActivity">
+
+    <TextView
+        android:id="@+id/texxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driver is on Tracking"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/texxt"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:textSize="@dimen/_16sdp"
+        android:padding="@dimen/_5sdp"
+        android:text="Stop"/>
+
+</RelativeLayout>

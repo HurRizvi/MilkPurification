@@ -75,13 +75,22 @@
                     android:text="FCM READING :"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp" />
+
                 <Button
+                    android:id="@+id/btnRead"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/btnRead"
                     android:layout_below="@+id/tvHeading"
-                    android:text="Read"
-                    />
+                    android:text="Read" />
+
+
+                <Button
+                    android:id="@+id/btnDriver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvHeading"
+                    android:text="Driver"
+                    android:layout_alignParentEnd="true"/>
 
 
                 <TextView

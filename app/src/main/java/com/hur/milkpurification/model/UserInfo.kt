@@ -4,5 +4,5 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 
 class UserInfo(
-    var milkDepthInInches : Int
+    var milkDepthInInches : Long
 )
