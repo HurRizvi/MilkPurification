@@ -74,6 +74,7 @@ class DriverActivity : AppCompatActivity() {
                 writeNewUser(location.latitude,location.longitude)
         }
 
+
     }
 
     private fun writeNewUser(latitude : Double, longitude : Double) {
