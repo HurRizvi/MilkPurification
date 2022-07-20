@@ -58,6 +58,6 @@ class HomeActivity : BaseActivity() {
 
     fun showToast(message : String){
 
-        Toast.makeText(this, "Value has been changed $message", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Value has been changed $message inches", Toast.LENGTH_SHORT).show()
     }
 }

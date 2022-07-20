@@ -15,15 +15,15 @@
         android:textColor="@color/colorPrimary"
         android:layout_centerInParent="true"/>
 
-<!--    <Button-->
-<!--        android:id="@+id/btnStop"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/texxt"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="@dimen/_30sdp"-->
-<!--        android:padding="@dimen/_5sdp"-->
-<!--        android:text="Stop"-->
-<!--        android:textSize="@dimen/_16sdp" />-->
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/texxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:padding="@dimen/_5sdp"
+        android:text="Stop"
+        android:textSize="@dimen/_16sdp" />
 
 </RelativeLayout>
