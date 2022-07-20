@@ -30,40 +30,6 @@ class HomeActivity : BaseActivity() {
         setContentView(binding.root)
 
 
-        /*    NavHostFragment finalHost = NavHostFragment.create(R.navigation.nav_graph);
-
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.nav_host_Fragmnet,finalHost)
-                .setPrimaryNavigationFragment(finalHost) // equivalent to app:defaultNavHost="true"
-                .commit();*/
-
-
-        binding.bottomNavigation.setOnItemSelectedListener { item ->
-            val id: Int = item.getItemId()
-            when (id) {
-                R.id.homeFragment -> {
-                    navController = Navigation.findNavController(
-                        this,
-                        R.id.navHostFragment
-                    )
-                    navController!!.navigate(R.id.homeFragment, null)
-                }
-            }
-            true
-        }
-
-        /**
-         * Setup Navigation
-         */
-        //binding.bottomNavigation.background = null
-
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.navHostFragment) as NavHostFragment
-        NavigationUI.setupWithNavController(
-            binding.bottomNavigation ,
-            navHostFragment.navController
-        )
-
-
         val database = FirebaseDatabase.getInstance()
         val dbReference = database.getReference("milkDepthInInches")
 //        dbReference.setValue("milkDepthInInches");
