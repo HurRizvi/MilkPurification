@@ -65,9 +65,7 @@ class DriverActivity : AppCompatActivity() {
                  }
              })
  */
-        var lastLat : Double
-        var lastLong : Double
-        var count : Int
+
         fusedLocationClient.lastLocation.addOnSuccessListener { location ->
             if (location != null)
 
